@@ -1,0 +1,6 @@
+@import'./variables';
+
+@for $i from 1 to 3 {
+    li#{$i} {width: $cajanombre -100px;} 
+    
+}

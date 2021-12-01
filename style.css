@@ -1,0 +1,231 @@
+@import'./Pages/scss/_variables.scss';
+h1{
+    color: rgb(2, 105, 2);
+    font-size: 60px;
+    font-style: italic;
+    background-image: url("../Media/rcd\ logo.jpg"), linear-gradient(to top,rgb(92, 92, 92), black);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: contain;
+}
+
+
+
+h2{
+    color: rgb(0, 235, 0);
+
+}
+
+h3{
+    color: rgb(0, 235, 0);
+}
+
+p{
+    color: black;
+}
+
+/*encabezados del menu*/
+ul{
+    list-style-type: none;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 0.5px;
+}
+li{
+    float: left;
+    display: flex;
+    justify-content: space-between;
+    
+}
+li a {
+    display: inline-block;
+    padding: 2px;
+    margin: 1%;
+    list-style-type: none;
+}
+
+.menu{
+    color:  rgb(2, 105, 2);
+    background-color: black;
+    font-size: 20px;
+    margin-top: 0.5px;
+    align-self: start;
+    transition: scale, 2s;
+    
+}
+.menu:hover{
+    transform: scale(2,1);
+}
+.menu-principal{
+    position: sticky;
+    z-index: 1;
+    top: 1;       
+}
+.navegacion{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.sala-de-reuniones{
+    transform: translate(110px,0px);
+}
+.video{
+    transform: translate(20px,);
+}
+/*integrantes*/
+
+.integrantes{
+    color: black;
+    font-family: 'Open Sans Condensed', sans-serif;;
+    list-style-type: none;
+    display: flex;
+    grid-template-areas: 
+    'nombre1  nombre2  nombre3  nombre4  nombre5';
+    grid-template-columns: 10% 10% 10% 10% 10%;
+    grid-column-gap: 200px;
+    justify-items: stretch;
+        
+}
+.nombre1{
+    grid-area: nombre1;
+    justify-self: start;    
+}
+.nombre2{
+    grid-area: nombre2;
+    justify-self: start;
+}
+.nombre3{
+    grid-area: nombre3;
+    justify-self: start;
+}
+.nombre4{
+    grid-area: nombre4;
+    justify-self: start;
+}
+.nombre5{
+    grid-area: nombre5;
+    justify-self: start;
+}
+/*lista info*/
+.lista-info{
+    color: black;
+    font-family: 'Open Sans Condensed', sans-serif;;
+    list-style-type: upper-roman;
+    width: 700px;
+    display: flex;
+    justify-content: space-between;           
+
+}
+ol li{
+    margin-left: 50px;
+}
+/* Tabla de clientes/informacion */
+.clientes{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;        
+}
+
+.encabezado-tabla{
+    color: rgb(0, 235, 0);
+    background-color: black;    
+    
+}
+
+.lista-clientes-servicios-tabla{
+    color: rgb(2, 105, 2);
+    background-color: black;
+    
+}
+
+/* Tabla de clientes/informacion */
+
+/* contacto */
+.titulos-del-formulario{
+    color: rgb(0, 235, 0);
+}
+.nombre{
+    background-color: black;
+    color: rgb(255, 255, 255);
+}
+.apellido{
+    background-color: black;
+    color: rgb(255, 255, 255);
+}
+.correo{
+    background-color: black;
+    color: rgb(255, 255, 255);
+}
+.options{
+    background-color: black;
+    color: rgb(255, 255, 255);
+}
+.input{
+    background-color: black;
+    color: rgb(255, 255, 255);
+}
+
+.textarea{
+    background-color: black;
+    color: rgb(255, 255, 255);
+}
+/* contacto */
+
+/*Footer*/
+footer div{
+    width: 300px;
+
+}
+/*Footer*/
+
+/* Media Queries*/
+/*PC*/
+
+@media only screen and (min-width: 768px){
+    body{
+        background-color: rgb(92, 92, 92);
+    }
+}
+/*Tablet*/
+@media only screen and (max-width: 767px) and (min-width: 321px){
+    body{
+        background-color: rgb(92, 92, 92);
+    }
+    .integrantes{
+        color: rgb(52, 104, 0);
+        font-family: 'Open Sans Condensed', sans-serif;;
+        list-style-type: none;
+        display: flex;
+        grid-template-areas: 
+        'nombre1  nombre2  nombre3' 
+        'nombre4  nombre5';
+        grid-template-columns: 10% 10% 10% 10% 10%;
+        grid-column-gap: 200px;
+        justify-items: stretch;
+            
+    }
+}
+/*Mobile*/
+@media only screen and ( max-width: 320px){
+    body{
+        background-color: rgb(92, 92, 92);
+    }
+    .integrantes{
+        color: rgb(52, 104, 0);
+        font-family: 'Open Sans Condensed', sans-serif;;
+        list-style-type: none;
+        display: flex;
+        grid-template-areas: 
+        'nombre1' 
+        'nombre2'
+        'nombre3'
+        'nombre4'  
+        'nombre5';
+        grid-template-columns: 10% 10% 10% 10% 10%;
+        grid-column-gap: 200px;
+        justify-items: stretch;
+            
+    }
+}

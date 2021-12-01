@@ -1,0 +1,230 @@
+@import'./variables';
+
+h1{
+    color: $titulos-principales;
+    font-size: 60px;
+    font-style: italic;
+    background-image: url("../Media/rcd logo.jpg"), linear-gradient(to top,rgb(92, 92, 92), black);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: contain;
+}
+
+
+h2{
+    color: $color-titulos;
+
+}
+
+h3{
+    color: $color-titulos;
+}
+
+
+
+/*encabezados del menu*/
+ul{
+    list-style-type: none;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 0.5px;
+}
+li{
+    float: left;
+    display: flex;
+    justify-content: space-between;
+    a {
+        display: inline-block;
+        padding: 2px;
+        margin: 1%;
+        list-style-type: none;
+    }
+}
+
+
+.navegacion__menu{
+    color: $titulos-principales;
+    background-color: black;
+    font-size: 20px;
+    margin-top: 0.5px;
+    align-self: start;
+    transition: scale, 2s;
+    .menu:hover{
+        transform: scale(2,1);
+    }
+}
+
+.menu-principal{
+    position: sticky;
+    z-index: 1;
+    top: 1;       
+}
+.navegacion{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.sala-de-reuniones{
+    transform: translate(110px,0px);
+}
+.video{
+    transform: translate(20px,);
+}
+/*integrantes*/
+
+.integrantes{
+    color: black;
+    font-family: 'Open Sans Condensed', sans-serif;;
+    list-style-type: none;
+    display: flex;
+    grid-template-areas: 
+    'nombre1  nombre2  nombre3  nombre4  nombre5';
+    grid-template-columns: 10% 10% 10% 10% 10%;
+    grid-column-gap: 200px;
+    justify-items: stretch;
+        
+}
+.integrante__nombre1{
+    grid-area: nombre1;
+    justify-self: start;    
+}
+.integrante__nombre2{
+    grid-area: nombre2;
+    justify-self: start;
+}
+.integrante__nombre3{
+    grid-area: nombre3;
+    justify-self: start;
+}
+.integrante__nombre4{
+    grid-area: nombre4;
+    justify-self: start;
+}
+.integrante__nombre5{
+    grid-area: nombre5;
+    justify-self: start;
+}
+/*lista info*/
+.lista-info{
+    color: black;
+    font-family: 'Open Sans Condensed', sans-serif;;
+    list-style-type: upper-roman;
+    width: 700px;
+    display: flex;
+    justify-content: space-between;
+    ol li{
+        margin-left: 50px;
+    }           
+
+}
+
+/* Tabla de clientes/informacion */
+.clientes{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;        
+}
+
+.encabezado-tabla{
+    color: $color-titulos;
+    background-color: black;    
+    
+}
+
+.lista-clientes-servicios-tabla{
+    color: $titulos-principales;
+    background-color: black;
+    
+}
+
+/* Tabla de clientes/informacion */
+
+/* contacto */
+.titulos-del-formulario{
+    color: $color-titulos;
+}
+.nombre{
+    background-color: $color-background;
+    color: $titulos-formulario;
+}
+.apellido{
+    background-color: $color-background;
+    color: $titulos-formulario;
+}
+.correo{
+    background-color: $color-background;
+    color: $titulos-formulario;
+}
+.options{
+    background-color: $color-background;
+    color: $titulos-formulario;
+}
+.input{
+    background-color: $color-background;
+    color: $titulos-formulario;
+}
+
+.textarea{
+    background-color: $color-background;
+    color: $titulos-formulario;
+}
+/* contacto */
+
+/*Footer*/
+footer div{
+    width: 300px;
+
+}
+/*Footer*/
+
+/* Media Queries*/
+/*PC*/
+
+@media only screen and (min-width: 768px){
+    body{
+        background-color: $background-color-web;
+    }
+}
+/*Tablet*/
+@media only screen and (max-width: 767px) and (min-width: 321px){
+    body{
+        background-color: $background-color-web;
+    }
+    .integrantes{
+        color: $titulos-principales;
+        font-family: 'Open Sans Condensed', sans-serif;;
+        list-style-type: none;
+        display: flex;
+        grid-template-areas: 
+        'nombre1  nombre2  nombre3' 
+        'nombre4  nombre5';
+        grid-template-columns: 10% 10% 10% 10% 10%;
+        grid-column-gap: 200px;
+        justify-items: stretch;
+            
+    }
+}
+/*Mobile*/
+@media only screen and ( max-width: 320px){
+    body{
+        background-color: $background-color-web;
+    }
+    .integrantes{
+        color: $titulos-principales;
+        font-family: 'Open Sans Condensed', sans-serif;;
+        list-style-type: none;
+        display: flex;
+        grid-template-areas: 
+        'nombre1' 
+        'nombre2'
+        'nombre3'
+        'nombre4'  
+        'nombre5';
+        grid-template-columns: 10% 10% 10% 10% 10%;
+        grid-column-gap: 200px;
+        justify-items: stretch;
+            
+    }
+}
