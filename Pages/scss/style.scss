@@ -19,51 +19,30 @@ h2{
 h3{
     color: $color-titulos;
 }
-
-
-
-/*encabezados del menu*/
-ul{
+ul {
     list-style-type: none;
     overflow: hidden;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    margin-top: 0.5px;
-}
-li{
+    margin-top: 0.5px; }
+  
+  li {
     float: left;
     display: flex;
-    justify-content: space-between;
-    a {
-        display: inline-block;
-        padding: 2px;
-        margin: 1%;
-        list-style-type: none;
-    }
-}
+    justify-content: space-between; }
+    li a {
+      display: inline-block;
+      padding: 2px;
+      margin: 1%;
+      list-style-type: none; }
 
 
-.navegacion__menu{
+/*encabezados del menu*/
+.container-fluid{
     color: $titulos-principales;
-    background-color: black;
-    font-size: 20px;
-    margin-top: 0.5px;
-    align-self: start;
-    transition: scale, 2s;
-    .menu:hover{
-        transform: scale(2,1);
-    }
-}
 
-.menu-principal{
-    position: sticky;
-    z-index: 1;
-    top: 1;       
-}
-.navegacion{
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+    font-size: 20px;
 }
 
 .sala-de-reuniones{

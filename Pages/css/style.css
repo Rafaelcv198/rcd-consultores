@@ -16,44 +16,29 @@ h3 {
 
 p {
   color: black; }
+  ul {
+    list-style-type: none;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 0.5px; }
+  
+  li {
+    float: left;
+    display: flex;
+    justify-content: space-between; }
+    li a {
+      display: inline-block;
+      padding: 2px;
+      margin: 1%;
+      list-style-type: none; }
 
 /*encabezados del menu*/
-ul {
-  list-style-type: none;
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  margin-top: 0.5px; }
-
-li {
-  float: left;
-  display: flex;
-  justify-content: space-between; }
-  li a {
-    display: inline-block;
-    padding: 2px;
-    margin: 1%;
-    list-style-type: none; }
-
-.navegacion__menu {
-  color: #026902;
-  background-color: black;
+.navbar-nav{
+  color:#026902;  
   font-size: 20px;
-  margin-top: 0.5px;
-  align-self: start;
-  transition: scale, 2s; }
-  .navegacion__menu .menu:hover {
-    transform: scale(2, 1); }
-
-.menu-principal {
-  position: sticky;
-  z-index: 1;
-  top: 1; }
-
-.navegacion {
-  display: grid;
-  grid-template-columns: 25% 25% 25% 25%; }
+}
 
 .sala-de-reuniones {
   transform: translate(110px, 0px); }
